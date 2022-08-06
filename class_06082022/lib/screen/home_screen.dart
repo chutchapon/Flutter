@@ -15,78 +15,175 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('หน้าโฮมเพจ'),
       ),
       drawer: const Drawer(),
-      body: Container(
-        child: Container(
-          decoration: const BoxDecoration(
-            border: Border(
-              top: BorderSide(color: Colors.black, width: 5),
-              bottom: BorderSide(
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
                 color: Colors.black,
-                width: 5,
+                width: 1,
               ),
             ),
-            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: const [
+                    Icon(Icons.home),
+                    Text('หน้าหลัก'),
+                  ],
+                ),
+                Column(
+                  children: const [
+                    Icon(Icons.info),
+                    Text('ข่าวสาร'),
+                  ],
+                ),
+                Column(
+                  children: const [
+                    Icon(Icons.phone_android),
+                    Text('ติดต่อ'),
+                  ],
+                ),
+              ],
+            ),
           ),
-          height: 100,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.home),
-                  Text('หน้าหลัก'),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.info),
-                  Text('ข่าวสาร'),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.phone_iphone),
-                  Text('ติดต่อ'),
-                ],
-              ),
-            ],
+          const SizedBox(
+            height: 10,
           ),
-        ),
-        //   color: Colors.grey,
-        //   margin: EdgeInsets.all(8),
-        //   // margin: EdgeInsets.only(top: 8, left: 8, right: 8),
-        //   child: Center(
-        //     child: Column(
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       children: [
-        //         Column(
-        //           children: [
-        //             Text("สวัสดีชาวโลก"),
-        //             SizedBox(width: 10),
-        //             ElevatedButton(
-        //               onPressed: () => [],
-        //               child: Text('กด'),
-        //             ),
-        //           ],
-        //         ),
-        //         Row(
-        //           mainAxisAlignment: MainAxisAlignment.center,
-        //           children: [
-        //             Text("สวัสดีชาวโลก"),
-        //             SizedBox(width: 10),
-        //             ElevatedButton(
-        //               onPressed: () => [],
-        //               child: Text('กด'),
-        //             ),
-        //           ],
-        //         ),
-        //       ],
-        //     ),
-        //   ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 1,
+              ),
+            ),
+            height: 250,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 150,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Column(
+                        children: const [
+                          Text('ไตเติ้ล'),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 150,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Column(
+                        children: const [
+                          Text(
+                              'รายละเอียดของข้อมูล รายละเอียดของข้อมูล รายละเอียดของข้อมูล'),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 150,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text('ริวิว :'),
+                          Icon(Icons.star),
+                          Icon(Icons.star),
+                          Icon(Icons.star)
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      width: 150,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        // Row
+                        children: [
+                          Column(
+                            children: const [
+                              Icon(Icons.timelapse),
+                              Text('เวลา'),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: const [
+                              Icon(Icons.receipt),
+                              Text('ราคา'),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: const [
+                              Icon(Icons.dining_sharp),
+                              Text('รายละเอียด'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.home,
+                          size: 150,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
