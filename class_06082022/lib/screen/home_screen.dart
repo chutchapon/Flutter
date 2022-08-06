@@ -16,37 +16,77 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: const Drawer(),
       body: Container(
-        color: Colors.grey,
-        margin: EdgeInsets.all(8),
-        // margin: EdgeInsets.only(top: 8, left: 8, right: 8),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        child: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              top: BorderSide(color: Colors.black, width: 5),
+              bottom: BorderSide(
+                color: Colors.black,
+                width: 5,
+              ),
+            ),
+            color: Colors.grey,
+          ),
+          height: 100,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(
-                children: [
-                  Text("สวัสดีชาวโลก"),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    onPressed: () => [],
-                    child: Text('กด'),
-                  ),
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(Icons.home),
+                  Text('หน้าหลัก'),
                 ],
               ),
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("สวัสดีชาวโลก"),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    onPressed: () => [],
-                    child: Text('กด'),
-                  ),
+                children: const [
+                  Icon(Icons.info),
+                  Text('ข่าวสาร'),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(Icons.phone_iphone),
+                  Text('ติดต่อ'),
                 ],
               ),
             ],
           ),
         ),
+        //   color: Colors.grey,
+        //   margin: EdgeInsets.all(8),
+        //   // margin: EdgeInsets.only(top: 8, left: 8, right: 8),
+        //   child: Center(
+        //     child: Column(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: [
+        //         Column(
+        //           children: [
+        //             Text("สวัสดีชาวโลก"),
+        //             SizedBox(width: 10),
+        //             ElevatedButton(
+        //               onPressed: () => [],
+        //               child: Text('กด'),
+        //             ),
+        //           ],
+        //         ),
+        //         Row(
+        //           mainAxisAlignment: MainAxisAlignment.center,
+        //           children: [
+        //             Text("สวัสดีชาวโลก"),
+        //             SizedBox(width: 10),
+        //             ElevatedButton(
+        //               onPressed: () => [],
+        //               child: Text('กด'),
+        //             ),
+        //           ],
+        //         ),
+        //       ],
+        //     ),
+        //   ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
