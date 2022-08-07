@@ -19,8 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("สวัสดีฉันชื่อ : ${name[1]}"),
-          Text("ฉันอายุ : $age ปี"),
+          Text("สวัสดี : ${name[1]}"),
+          Text("อายุ : $age ปี"),
         ],
       ),
     );
