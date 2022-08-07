@@ -10,15 +10,19 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    List name = ['John Doe', 'Jane Doe', 'Jame Doe'];
+    int age = 20;
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('HomeScreen'),
-        ),
-        body: Column(
-          children: [
-            // Text("สวัสดีฉันชื่อ $name"),
-            // Text("ฉันอายุ $age ปี"),
-          ],
-        ));
+      appBar: AppBar(
+        title: const Text('HomeScreen'),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("สวัสดีฉันชื่อ : ${name[1]}"),
+          Text("ฉันอายุ : $age ปี"),
+        ],
+      ),
+    );
   }
 }
