@@ -40,7 +40,6 @@ class _PlayScreenState extends State<PlayScreen> {
   void reset() {
     setState(
       () {
-        name = 'John Doe';
         nameController.clear();
         number = 0;
       },
